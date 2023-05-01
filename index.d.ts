@@ -1,0 +1,1 @@
+export function select(selector: any): any;
