@@ -1,6 +1,6 @@
 {
   "name": "jsuals",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "js utility for both client and runtime",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
