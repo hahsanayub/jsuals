@@ -1,27 +1,26 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'production',
-  entry: './src/index.ts',
+  entry: path.resolve(__dirname, 'src/index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'jsuals.js',
+    filename: 'index.js',
     library: 'jsuals',
     libraryTarget: 'umd',
-    globalObject: 'this'
-  },
-  resolve: {
-    extensions: ['.ts', '.js']
   },
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.(js)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'ts-loader'
-        }
-      }
-    ]
-  }
+        use: ['babel-loader'],
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['.js'],
+    modules: [path.resolve(__dirname, 'src')],
+  },
+  mode: 'development',
+  devtool: 'sourceMap',
 };
