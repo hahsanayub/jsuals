@@ -1,5 +1,3 @@
-import selector from './selectors';
+import {select, selectAll} from './selectors';
 
-export {
-    selector
-}
+export {select, selectAll}

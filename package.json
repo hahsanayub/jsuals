@@ -1,8 +1,9 @@
 {
   "name": "jsuals",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "js utility for both client and runtime",
   "main": "dist/index.js",
+  "module": "dist/jsuals-client.js",
   "scripts": {
     "build": "webpack",
     "dev": "webpack --progress --colors --watch",
