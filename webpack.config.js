@@ -1,7 +1,6 @@
 const path = require('path');
 
-module.exports = [
-  {
+module.exports = [{
     // Configuration for client-side bundle
     entry: path.resolve(__dirname, 'src/index.js'),
     output: {
@@ -9,15 +8,14 @@ module.exports = [
       filename: 'jsuals-client.js',
       library: 'jsuals',
       libraryTarget: 'umd',
+      globalObject: 'this',
     },
     module: {
-      rules: [
-        {
-          test: /\.js$/,
-          exclude: /node_modules/,
-          use: ['babel-loader'],
-        },
-      ],
+      rules: [{
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      }, ],
     },
     resolve: {
       extensions: ['.js'],
@@ -32,15 +30,14 @@ module.exports = [
       filename: 'index.js',
       library: 'jsuals',
       libraryTarget: 'umd',
+      globalObject: 'this',
     },
     module: {
-      rules: [
-        {
-          test: /\.js$/,
-          exclude: /node_modules/,
-          use: ['babel-loader'],
-        },
-      ],
+      rules: [{
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      }, ],
     },
     resolve: {
       extensions: ['.js'],

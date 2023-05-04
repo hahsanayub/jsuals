@@ -2,6 +2,11 @@ import {
     notBrowserException
 } from "./exceptions";
 
+/**
+ * Returns object with various functions.
+ * @param {HTMLElement} selector - The input string.
+ * @returns {object} An object with various functions.
+ */
 export function select(selector) {
     try {
 
@@ -11,9 +16,6 @@ export function select(selector) {
             htmlSelector = document.querySelector(selector);
         }
         let fn = () => {
-            if (!document) {
-                throw new Error(notBrowserException)
-            }
         };
         fn.prototype.iText = function () {
             try {
@@ -75,7 +77,11 @@ export function select(selector) {
         throw new Error(notBrowserException)
     }
 }
-
+/**
+ * Returns object with various functions.
+ * @param {HTMLElement} selector - The input string.
+ * @returns {object} An object with various functions.
+ */
 export function selectAll(selector) {
     return document.querySelector(selector)
 }
