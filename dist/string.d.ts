@@ -1,8 +1,7 @@
 /**
- * Returns a string object with various string manipulation functions.
- * @param {String} str
+ * @param {String} string
  */
-export function string(str: string): {
+export function string(string: string): {
     /**
      * @function isString
      * @returns {Boolean}

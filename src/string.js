@@ -1,5 +1,4 @@
 /**
- * Returns a string object with various string manipulation functions.
  * @param {String} string
  */
 
