@@ -28,22 +28,6 @@ const capitalizedString = string('jsuals library to easE the codinG').capitalize
     const capitalizedString = jsuals.string('jsuals library to easE the codinG').capitalize();
     // output is "Jsuals Library To Ease The Coding"
 </script>
-
-```
-
-## Functions (UI)
-### DOM 
-
-```typescript
-import { asyncMap } "@thalesrc/js-utils/array";
-
-const array = [1, 2, 3];
-
-const result = await asyncMap(array, async value => {
- return await addOneAfterASecond(value);
-});
-
-console.log(result); // [2, 3, 4]
 ```
 
 ## License
